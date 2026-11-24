@@ -1,0 +1,9 @@
+{
+  "name": "instilite-prototype",
+  "version": "1.0.0",
+  "description": "InstiLite - campus opportunity & schedule platform (demo prototype with live backend)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node test/api-scenarios.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "better-sqlite3": "^11.5.0", "express": "^4.21.0" }
+}

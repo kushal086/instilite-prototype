@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: instilite-prototype
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: APPROVED_DOMAINS
+        value: smail.iitm.ac.in
+      # For persistence: switch plan to starter, add a disk, and set DB_PATH=/var/data/instilite.db
+      # disk:
+      #   name: data
+      #   mountPath: /var/data
+      #   sizeGB: 1
